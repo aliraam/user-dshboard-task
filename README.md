@@ -80,16 +80,22 @@ This project is a **User Dashboard** that displays **random user data** fetched 
 
 ### **1️⃣ Clone the Repository**
 
-```bash
-git clone https://github.com/username/user-dashboard.git
-cd user-dashboard
+git clone https://github.com/aliraam/admin-panel-task
 
-2. **cd** Contacts-Virtualized-Search
-   yarn install
+### **2️⃣ cd admin-panel-task**
 
-3. **Install dependencies** yarn install / npm install
+### **3️⃣ **Install dependencies\*\*
 
-4. **Start the development server** yarn dev / npm dev
+yarn install / npm install
 
-5. **Open your browser at** http://localhost:3000
+### **4️⃣ **Start the development server\*\*
+
+yarn dev / npm dev
+
+### **5️⃣ 5. **Open your browser at\*\*
+
+http://localhost:3000
+
+```
+
 ```
