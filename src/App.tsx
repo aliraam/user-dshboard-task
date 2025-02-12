@@ -5,7 +5,7 @@ import SearchBar from "./components/SearchBar";
 import CountryFilter from "./components/CountryFilter";
 import UserList from "./components/UserList";
 import Statistics from "./components/Statistics";
-import { useThemeStore } from "store/themeStore";
+import { useThemeStore } from "./store/themeStore";
 
 const App: React.FC = () => {
     useUsers(); // Fetch users on mount
