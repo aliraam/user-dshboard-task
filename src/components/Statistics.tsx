@@ -22,7 +22,7 @@ const Statistics: React.FC = () => {
     }, [users]);
 
     return (
-        <Card >
+        <Card sx={{ mt: 3 }}>
             <CardContent>
                 <Typography variant="h6" align="center">User Statistics</Typography>
                 <Typography variant="body1" align="center">Total Users: {users.length}</Typography>
@@ -55,5 +55,3 @@ const Statistics: React.FC = () => {
 };
 
 export default Statistics;
-git add src / components / Statistics.tsx
-git commit - m "Feature: Add country and count labels to pie chart"
