@@ -1,14 +1,23 @@
 import React, { useMemo } from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer, Label } from "recharts";
+import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer } from "recharts";
 import { useUserStore } from "../store/userStore";
 
-const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f50", "#00c49f", "#d88484"];
+const COLORS = [
+    "#8884d8", "#82ca9d", "#ffc658", "#ff7f50", "#00c49f",
+    "#d88484", "#6a5acd", "#ff69b4", "#a52a2a", "#20b2aa"
+];
+
+interface LabelProps {
+    name: string;
+    value: number;
+    x: number;
+    y: number;
+}
 
 const Statistics: React.FC = () => {
     const { users } = useUserStore();
 
-    // Generate user count per country
     const countryStats = useMemo(() => {
         const countMap: Record<string, number> = {};
         users.forEach((user) => {
@@ -21,8 +30,24 @@ const Statistics: React.FC = () => {
         }));
     }, [users]);
 
+    const renderLabel = ({ name, value, x, y }: LabelProps) => {
+        return (
+            <text
+                x={x}
+                y={y}
+                fill="white"
+                textAnchor="middle"
+                dominantBaseline="central"
+                fontSize="12px"
+                fontWeight="bold"
+            >
+                {name} ({value})
+            </text>
+        );
+    };
+
     return (
-        <Card sx={{ mt: 3 }}>
+        <Card >
             <CardContent>
                 <Typography variant="h6" align="center">User Statistics</Typography>
                 <Typography variant="body1" align="center">Total Users: {users.length}</Typography>
@@ -38,7 +63,8 @@ const Statistics: React.FC = () => {
                                     outerRadius={100}
                                     fill="#8884d8"
                                     dataKey="value"
-                                    label={({ name, value }) => `${name}: ${value}`} // Show Country & Count
+                                    label={renderLabel}
+                                    labelLine={false}
                                 >
                                     {countryStats.map((_, index) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
