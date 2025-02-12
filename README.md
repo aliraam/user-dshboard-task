@@ -27,9 +27,6 @@
 1. [Overview](#overview)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Packages & Versions](#packages--versions)
-5. [Screenshots](#screenshots)
-6. [License](#license)
 
 ---
 
@@ -81,7 +78,7 @@ This project is a **User Dashboard** that displays **random user data** fetched 
 ### **1️⃣ Clone the Repository**
 
 ```
-git clone https://github.com/aliraam/admin-panel-task
+git clone https://github.com/aliraam/user-dshboard-task
 ```
 
 ### **2️⃣ cd admin-panel-task**
