@@ -94,7 +94,9 @@ yarn install / npm install
 
 ### **4️⃣ Start the development server**
 
+```
 yarn dev / npm dev
+```
 
 ### **5️⃣ Open your browser at**
 
