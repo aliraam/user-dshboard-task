@@ -19,6 +19,7 @@
     "react-dom": "^19.0.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^7.1.5",
+    "recharts": "^2.15.1",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@types/react-router-dom": "^5.3.3",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
