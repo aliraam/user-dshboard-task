@@ -80,22 +80,24 @@ This project is a **User Dashboard** that displays **random user data** fetched 
 
 ### **1️⃣ Clone the Repository**
 
+```
 git clone https://github.com/aliraam/admin-panel-task
+```
 
 ### **2️⃣ cd admin-panel-task**
 
-### **3️⃣ **Install dependencies\*\*
+### **3️⃣ Install dependencies**
 
+```
 yarn install / npm install
+```
 
-### **4️⃣ **Start the development server\*\*
+### **4️⃣ Start the development server**
 
 yarn dev / npm dev
 
-### **5️⃣ 5. **Open your browser at\*\*
-
-http://localhost:3000
+### **5️⃣ Open your browser at**
 
 ```
-
+http://localhost:3000
 ```
