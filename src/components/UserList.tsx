@@ -9,7 +9,6 @@ const UserList: React.FC = () => {
     const { isLoading, data: users = [] } = useUsers();
     const { searchTerm, selectedCountry } = useUserStore();
 
-    // Filter users based on search and country selection
     const filteredUsers: User[] = users
         .filter(
             (user: User) =>
@@ -21,12 +20,12 @@ const UserList: React.FC = () => {
         );
 
     return (
-        <Box >
+        <Box>
             {isLoading && (
                 <Box
                     sx={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(2, 1fr)",
+                        gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "repeat(2, 1fr)" },
                         gap: 2,
                     }}
                 >
@@ -44,7 +43,7 @@ const UserList: React.FC = () => {
                 <Box
                     sx={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(2, 1fr)",
+                        gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "repeat(2, 1fr)" }, // Responsive layout
                         gap: 2,
                     }}
                 >
