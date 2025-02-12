@@ -31,20 +31,18 @@ const App: React.FC = () => {
                 <Box
                     sx={{
                         display: "grid",
-                        gridTemplateColumns: { xs: "1fr", md: "2fr 1fr" }, // 2:1 ratio on desktop, 1 column on mobile
+                        gridTemplateColumns: { xs: "1fr", md: "2fr 1fr" },
                         gap: 2,
                         mt: 2,
                     }}
                 >
-                    {/* Left Side - Inputs & Cards */}
                     <Box>
                         <SearchBar />
                         <CountryFilter />
                         <UserList />
                     </Box>
 
-                    {/* Right Side - Statistics */}
-                    <Paper elevation={3} sx={{ p: 2 }}>
+                    <Paper elevation={3} sx={{ boxShadow: 'none' }}>
                         <Statistics />
                     </Paper>
                 </Box>

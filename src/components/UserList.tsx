@@ -21,7 +21,7 @@ const UserList: React.FC = () => {
         );
 
     return (
-        <Box sx={{ p: 2 }}>
+        <Box >
             {isLoading && (
                 <Box
                     sx={{

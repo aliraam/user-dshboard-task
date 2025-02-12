@@ -21,7 +21,7 @@ const Statistics: React.FC = () => {
     }, [users]);
 
     return (
-        <Card sx={{ mt: 3 }}>
+        <Card >
             <CardContent>
                 <Typography variant="h6">Statistics</Typography>
                 <Typography variant="body1">Total Users: {users.length}</Typography>

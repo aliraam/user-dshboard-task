@@ -20,7 +20,7 @@ const UserCard: React.FC<UserCardProps> = ({ user, isLoading }) => {
     const [showDetails, setShowDetails] = useState(false);
 
     return (
-        <Card sx={{ maxWidth: 345, m: 2, p: 2, height: showDetails ? 280 : 180, transition: "height 0.3s ease-in-out" }}>
+        <Card sx={{ maxWidth: 345, height: showDetails ? 280 : 180, transition: "height 0.3s ease-in-out" }}>
             <CardContent>
                 {isLoading ? (
                     <>
