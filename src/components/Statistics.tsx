@@ -81,5 +81,4 @@ const Statistics: React.FC = () => {
 };
 
 export default Statistics;
-git add src / components / Statistics.tsx
-git commit - m "Feature: Add country and count labels to pie chart"
+
