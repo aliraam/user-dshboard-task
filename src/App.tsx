@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Box, CssBaseline } from "@mui/material";
-import { Routes, Route } from "react-router-dom";
+import { Container, Box, CssBaseline, Paper } from "@mui/material";
 import { useUsers } from "./hooks/useUsers";
 import SearchBar from "./components/SearchBar";
 import CountryFilter from "./components/CountryFilter";
@@ -14,11 +13,25 @@ const App: React.FC = () => {
         <>
             <CssBaseline />
             <Container>
-                <Box my={2}>
-                    <SearchBar />
-                    <CountryFilter />
-                    <UserList />
-                    <Statistics />
+                <Box
+                    sx={{
+                        display: "grid",
+                        gridTemplateColumns: { xs: "1fr", md: "2fr 1fr" }, // 2:1 ratio on desktop, 1 column on mobile
+                        gap: 2,
+                        mt: 2,
+                    }}
+                >
+                    {/* Left Side - Inputs & Cards */}
+                    <Box>
+                        <SearchBar />
+                        <CountryFilter />
+                        <UserList />
+                    </Box>
+
+                    {/* Right Side - Statistics */}
+                    <Paper elevation={3} sx={{ p: 2 }}>
+                        <Statistics />
+                    </Paper>
                 </Box>
             </Container>
         </>
