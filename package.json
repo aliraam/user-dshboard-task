@@ -1,4 +1,15 @@
 {
+  "name": "user-dashboard",
+  "version": "1.0.0",
+  "description": "A React + TypeScript User Dashboard using Webpack, Zustand, and MUI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write .",
+    "clean": "rm -rf dist node_modules && yarn install"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -10,8 +21,13 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
