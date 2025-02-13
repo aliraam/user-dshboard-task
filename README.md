@@ -81,7 +81,7 @@ This project is a **User Dashboard** that displays **random user data** fetched 
 git clone https://github.com/aliraam/user-dshboard-task
 ```
 
-### **2️⃣ cd admin-panel-task**
+### **2️⃣ cd user-dshboard-task**
 
 ### **3️⃣ Install dependencies**
 
