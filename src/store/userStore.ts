@@ -1,27 +1,28 @@
 import { create } from "zustand";
+import { devtools } from "zustand/middleware";
+import { UserState, User } from '../types';
 
-interface User {
-    name: { first: string; last: string };
-    email: string;
-    location: { country: string };
-    picture: { medium: string };
-    phone: string;
-}
-
-interface UserStore {
-    users: User[];
-    searchTerm: string;
-    selectedCountry: string;
-    setUsers: (users: User[]) => void;
-    setSearchTerm: (term: string) => void;
-    setSelectedCountry: (country: string) => void;
-}
-
-export const useUserStore = create<UserStore>((set) => ({
+const initialState: Omit<UserState, 'setUsers' | 'setLoading' | 'setError'> = {
     users: [],
-    searchTerm: "",
-    selectedCountry: "",
-    setUsers: (users) => set({ users }),
-    setSearchTerm: (term) => set({ searchTerm: term }),
-    setSelectedCountry: (country) => set({ selectedCountry: country }),
-}));
+    isLoading: false,
+    error: null,
+};
+
+export const useUserStore = create<UserState>()(
+    devtools(
+        (set) => ({
+            ...initialState,
+            setUsers: (users: User[]) => set({ users }),
+            setLoading: (isLoading: boolean) => set({ isLoading }),
+            setError: (error: Error | null) => set({ error }),
+        }),
+        {
+            name: 'user-store',
+        }
+    )
+);
+
+// Selectors for performance
+export const useUsers = () => useUserStore((state) => state.users);
+export const useIsLoading = () => useUserStore((state) => state.isLoading);
+export const useError = () => useUserStore((state) => state.error);
